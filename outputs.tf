@@ -14,3 +14,11 @@ output "nic_name" {
 output "public_ip" {
   value = azurerm_linux_virtual_machine.webserver.public_ip_address
 }
+
+output "vm_os" {
+  value = azurerm_linux_virtual_machine.webserver.source_image_reference[0].sku
+}
+
+output "vm_version" {
+  value = azurerm_linux_virtual_machine.webserver.source_image_reference[0].version
+}
